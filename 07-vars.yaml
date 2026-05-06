@@ -1,4 +1,4 @@
-- name: print the username and password
+- name: prompt level variables
   hosts: local
   connection: local
 
