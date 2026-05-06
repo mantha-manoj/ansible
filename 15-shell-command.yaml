@@ -9,3 +9,11 @@
   - name: print the output
     ansible.builtin.debug:
       msg: "{{ command_output }}"
+
+  - name: shell module test
+    ansible.builtin.shell: cat /etc/passwd | grep root
+    register: shell_output
+
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{ shell_output }}"
